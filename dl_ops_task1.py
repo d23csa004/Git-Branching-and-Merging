@@ -50,7 +50,7 @@ plt.legend()
 
 plt.subplot(2, 2, 3)
 plt.plot(x, leaky_relu_y, label='Leaky ReLU')
-plt.title('Leaky ReLU Activation Function')
+plt.title('Leaky ReLU Activation Functions')
 plt.xlabel('x')
 plt.ylabel('leaky_relu(x)')
 plt.legend()
