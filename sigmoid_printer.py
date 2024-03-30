@@ -9,21 +9,11 @@ Original file is located at
 
 import numpy as np
 
-def relu(x):
-    return np.maximum(0, x)
-
-def leaky_relu(x, alpha=0.01):
-    return np.where(x > 0, x, alpha * x)
-
-def tanh(x):
-    return np.tanh(x)
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
 
 random_values = [-3.5, -1.2, 0, 2.8, -4.1, 1.5, -0.7, 3.2, -2.4, 4.6]
 
-print("Output of ReLU, Leaky ReLU, and Tanh for random data:")
+print("Sigmoid values for random data:")
 for value in random_values:
-    print(f"Input: {value}")
-    print(f"ReLU: {relu(value)}")
-    print(f"Leaky ReLU: {leaky_relu(value)}")
-    print(f"Tanh: {tanh(value)}")
-    print()
+    print(f"Sigmoid({value}) = {sigmoid(value)}")
